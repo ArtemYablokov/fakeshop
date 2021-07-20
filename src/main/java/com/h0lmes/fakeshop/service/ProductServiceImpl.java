@@ -1,5 +1,6 @@
 package com.h0lmes.fakeshop.service;
 
+import com.amazonaws.xray.spring.aop.XRayEnabled;
 import com.h0lmes.fakeshop.model.Product;
 import org.springframework.stereotype.Service;
 
@@ -7,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
+@XRayEnabled
 public class ProductServiceImpl implements ProductService {
 
     private final Map<String, Product> repository = new HashMap<>();
