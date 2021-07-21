@@ -2,6 +2,8 @@ package com.h0lmes.fakeshop.web;
 
 import com.h0lmes.fakeshop.model.Product;
 import com.h0lmes.fakeshop.service.ProductService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -22,5 +24,10 @@ public class ProductController {
     @PutMapping("/product/{id}/add")
     public Product putProduct(@PathVariable String id, @RequestBody Product product) {
         return productService.putProduct(id, product);
+    }
+
+    @GetMapping("/health")
+    public ResponseEntity<HttpStatus> health() {
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }
