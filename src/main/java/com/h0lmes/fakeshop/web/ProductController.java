@@ -26,8 +26,22 @@ public class ProductController {
         return productService.putProduct(id, product);
     }
 
+    @GetMapping("/healthcheck")
+    public ResponseEntity<HttpStatus> healthcheck() {
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
     @GetMapping("/health")
     public ResponseEntity<HttpStatus> health() {
         return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @GetMapping("/string")
+    public String string() {
+        return "String";
+    }
+    @GetMapping("/stringbody")
+    public ResponseEntity<String> stringBody() {
+        return new ResponseEntity<>("String", HttpStatus.OK);
     }
 }
