@@ -36,9 +36,9 @@ public class ProductController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @GetMapping("/string")
+    @GetMapping("/stringv2")
     public String string() {
-        return "String";
+        return "Stringv2";
     }
     @GetMapping("/stringbody")
     public ResponseEntity<String> stringBody() {
