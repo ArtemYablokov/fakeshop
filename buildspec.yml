@@ -6,7 +6,7 @@ phases:
       - echo Get docker login for ECR
       - aws --version
       - aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 017702689008.dkr.ecr.eu-central-1.amazonaws.com
-      - REPOSITORY_URI=017702689008.dkr.ecr.eu-central-1.amazonaws.com/fakeshop-ecr-v2
+      - REPOSITORY_URI=017702689008.dkr.ecr.eu-central-1.amazonaws.com/fakeshop-ecr-v3
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
   build:
