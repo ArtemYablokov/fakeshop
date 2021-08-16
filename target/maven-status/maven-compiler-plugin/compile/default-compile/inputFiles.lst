@@ -1,7 +1,7 @@
-/Users/artemablokov/dev/AWS/fakeshop/src/main/java/com/h0lmes/fakeshop/aop/XRayInspector.java
-/Users/artemablokov/dev/AWS/fakeshop/src/main/java/com/h0lmes/fakeshop/service/ProductServiceImpl.java
-/Users/artemablokov/dev/AWS/fakeshop/src/main/java/com/h0lmes/fakeshop/config/WebConfig.java
-/Users/artemablokov/dev/AWS/fakeshop/src/main/java/com/h0lmes/fakeshop/model/Product.java
-/Users/artemablokov/dev/AWS/fakeshop/src/main/java/com/h0lmes/fakeshop/web/ProductController.java
-/Users/artemablokov/dev/AWS/fakeshop/src/main/java/com/h0lmes/fakeshop/service/ProductService.java
-/Users/artemablokov/dev/AWS/fakeshop/src/main/java/com/h0lmes/fakeshop/FakeshopApplication.java
+/Users/a/my/dev/fakeshop/src/main/java/com/h0lmes/fakeshop/FakeshopApplication.java
+/Users/a/my/dev/fakeshop/src/main/java/com/h0lmes/fakeshop/service/ProductService.java
+/Users/a/my/dev/fakeshop/src/main/java/com/h0lmes/fakeshop/aop/XRayInspector.java
+/Users/a/my/dev/fakeshop/src/main/java/com/h0lmes/fakeshop/config/WebConfig.java
+/Users/a/my/dev/fakeshop/src/main/java/com/h0lmes/fakeshop/model/Product.java
+/Users/a/my/dev/fakeshop/src/main/java/com/h0lmes/fakeshop/web/ProductController.java
+/Users/a/my/dev/fakeshop/src/main/java/com/h0lmes/fakeshop/service/ProductServiceImpl.java
