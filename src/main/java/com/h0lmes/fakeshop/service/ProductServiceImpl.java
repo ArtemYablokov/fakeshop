@@ -19,8 +19,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Product putProduct(Integer id, Product product) {
-        product.setId(id);
+    public Product putProduct(Product product) {
+        Integer id = product.getId();
         repository.put(id, product);
         return findProductById(id);
     }

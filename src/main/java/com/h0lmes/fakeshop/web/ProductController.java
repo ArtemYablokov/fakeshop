@@ -22,8 +22,8 @@ public class ProductController {
     }
 
     @PostMapping("/product")
-    public Product putProduct(@PathVariable Integer id, @RequestBody Product product) {
-        return productService.putProduct(id, product);
+    public Product putProduct(@RequestBody Product product) {
+        return productService.putProduct(product);
     }
 
     @GetMapping("/healthcheck")
