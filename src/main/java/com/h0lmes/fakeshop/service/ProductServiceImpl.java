@@ -11,15 +11,15 @@ import java.util.Map;
 @XRayEnabled
 public class ProductServiceImpl implements ProductService {
 
-    private final Map<String, Product> repository = new HashMap<>();
+    private final Map<Integer, Product> repository = new HashMap<>();
 
     @Override
-    public Product findProductById(String id) {
+    public Product findProductById(Integer id) {
         return repository.get(id);
     }
 
     @Override
-    public Product putProduct(String id, Product product) {
+    public Product putProduct(Integer id, Product product) {
         product.setId(id);
         repository.put(id, product);
         return findProductById(id);

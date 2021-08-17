@@ -1,23 +1,21 @@
 package com.h0lmes.fakeshop.model;
 
-import java.math.BigDecimal;
-
 public class Product {
 
-    private String id;
+    private Integer id;
     private String name;
     private String description;
-    private BigDecimal price;
+    private Integer price;
 
     public Product() {
         // default
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public Product setId(String id) {
+    public Product setId(Integer id) {
         this.id = id;
         return this;
     }
@@ -40,11 +38,11 @@ public class Product {
         return this;
     }
 
-    public BigDecimal getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public Product setPrice(BigDecimal price) {
+    public Product setPrice(Integer price) {
         this.price = price;
         return this;
     }

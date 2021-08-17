@@ -17,12 +17,12 @@ public class ProductController {
     }
 
     @GetMapping("/product/{id}")
-    public Product getProduct(@PathVariable String id) {
+    public Product getProduct(@PathVariable Integer id) {
         return productService.findProductById(id);
     }
 
-    @PutMapping("/product/{id}/add")
-    public Product putProduct(@PathVariable String id, @RequestBody Product product) {
+    @PostMapping("/product")
+    public Product putProduct(@PathVariable Integer id, @RequestBody Product product) {
         return productService.putProduct(id, product);
     }
 
