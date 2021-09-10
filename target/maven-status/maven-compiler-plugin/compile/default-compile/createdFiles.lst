@@ -1,7 +1,11 @@
 com\h0lmes\fakeshop\model\Product.class
 com\h0lmes\fakeshop\FakeshopApplication.class
+com\h0lmes\fakeshop\service\CacheTestService$TaskDTO.class
+com\h0lmes\fakeshop\web\CacheTestController.class
 com\h0lmes\fakeshop\aop\XRayInspector.class
 com\h0lmes\fakeshop\config\WebConfig.class
 com\h0lmes\fakeshop\service\ProductService.class
 com\h0lmes\fakeshop\web\ProductController.class
 com\h0lmes\fakeshop\service\ProductServiceImpl.class
+com\h0lmes\fakeshop\config\RedisConfig.class
+com\h0lmes\fakeshop\service\CacheTestService.class

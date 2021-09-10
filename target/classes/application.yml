@@ -4,3 +4,8 @@ server:
 spring:
   application:
     name: fakeshop
+
+redis:
+  hostname: rediscachev1.rgzrri.ng.0001.euc1.cache.amazonaws.com
+  port: 6379
+  prefix: testing
