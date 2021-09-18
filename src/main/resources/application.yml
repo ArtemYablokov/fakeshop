@@ -4,3 +4,17 @@ server:
 spring:
   application:
     name: fakeshop
+
+  datasource:
+#    url: jdbc:postgresql://database-postgres.cdcnz3lran11.eu-central-1.rds.amazonaws.com:5432/fakeshop
+    url: jdbc:postgresql://localhost:5432/fakeshop
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: 12345678
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgresPlusDialect
+    hibernate:
+      ddl-auto: create
+#    defer-datasource-initialization: true

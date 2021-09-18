@@ -1,21 +1,37 @@
 package com.h0lmes.fakeshop.model;
 
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "product")
 public class Product {
 
-    private Integer id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY/*, generator = "sequence_generator"*/)
+//    @SequenceGenerator(name = "sequence_generator")
+    private Long id;
     private String name;
-    private String description;
     private Integer price;
+    private Integer quantity;
 
-    public Product() {
-        // default
+    @ManyToOne
+    @JoinColumn(name = "shopping_cart_id")
+    private ShoppingCart cart;
+
+    public Product() {}
+
+    public Integer calculateSum(){
+        return this.price * this.quantity;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public Product setId(Integer id) {
+    public Product setId(Long id) {
         this.id = id;
         return this;
     }
@@ -29,15 +45,6 @@ public class Product {
         return this;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public Product setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-
     public Integer getPrice() {
         return price;
     }
@@ -45,5 +52,13 @@ public class Product {
     public Product setPrice(Integer price) {
         this.price = price;
         return this;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
     }
 }

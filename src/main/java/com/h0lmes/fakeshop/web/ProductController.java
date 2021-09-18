@@ -4,9 +4,11 @@ import com.h0lmes.fakeshop.model.Product;
 import com.h0lmes.fakeshop.service.ProductService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/product")
 @CrossOrigin(origins = "*")
 public class ProductController {
 
@@ -16,19 +18,14 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @GetMapping("/product/{id}")
-    public Product getProduct(@PathVariable Integer id) {
-        return productService.findProductById(id);
+    @GetMapping("/{id}")
+    public ResponseEntity<Product> getProduct(@PathVariable Long id) {
+        return ResponseEntity.ok(productService.findProductById(id));
     }
 
-    @PostMapping("/product")
-    public Product putProduct(@RequestBody Product product) {
-        return productService.putProduct(product);
-    }
-
-    @GetMapping("/healthcheck")
-    public ResponseEntity<HttpStatus> healthcheck() {
-        return new ResponseEntity<>(HttpStatus.OK);
+    @PostMapping("")
+    public ResponseEntity<Product> putProduct(@RequestBody Product product) {
+        return ResponseEntity.ok(productService.putProduct(product));
     }
 
     @GetMapping("/health")
@@ -36,12 +33,4 @@ public class ProductController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @GetMapping("/stringv2")
-    public String string() {
-        return "Stringv2";
-    }
-    @GetMapping("/stringbody")
-    public ResponseEntity<String> stringBody() {
-        return new ResponseEntity<>("String", HttpStatus.OK);
-    }
 }
