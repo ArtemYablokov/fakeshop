@@ -7,6 +7,7 @@ import com.h0lmes.fakeshop.repository.ShoppingCartRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -62,6 +63,15 @@ public class ShoppingCartService {
 
     public ShoppingCart test(String name) {
         ShoppingCart shoppingCart = getShoppingCartByName(name);
+
+        List<Product> products = shoppingCart.getProducts();
+        if (!products.isEmpty()) {
+            Product product = products.get(0);
+            Long id = product.getId();
+            Product productById = productService.findProductById(id);
+            System.out.println();
+        }
+
 
         shoppingCart.getProducts().add(generateProduct());
         ShoppingCart save = shoppingCartRepository.save(shoppingCart);

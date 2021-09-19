@@ -17,9 +17,21 @@ public class Product {
     private Integer price;
     private Integer quantity;
 
-    @ManyToOne
+    /*@ManyToOne
     @JoinColumn(name = "shopping_cart_id")
-    private ShoppingCart cart;
+    private ShoppingCart cart;*/
+
+    @Column(name = "user_id")
+    private Integer userId;
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
 
     public Product() {}
 

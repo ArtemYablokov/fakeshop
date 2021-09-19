@@ -12,11 +12,14 @@ public class ShoppingCart {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY/*, generator = "sequence_generator"*/)
 //    @SequenceGenerator(name = "sequence_generator")
+    @Column(name = "id")
     private Long id;
     @Column(unique = true)
     private String name;
     private Integer total;
-    @OneToMany(mappedBy = "cart", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+
+    @OneToMany(/*mappedBy = "cart",*/ fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
     private List<Product> products;
 
     public int calculateSum() {
