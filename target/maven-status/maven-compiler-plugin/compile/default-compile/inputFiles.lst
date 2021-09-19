@@ -1,13 +1,11 @@
-C:\Users\Artem_Yablokov\IdeaProjects\AWS\fakeshop\src\main\java\com\h0lmes\fakeshop\config\WebConfig.java
 C:\Users\Artem_Yablokov\IdeaProjects\AWS\fakeshop\src\main\java\com\h0lmes\fakeshop\repository\ProductRepository.java
 C:\Users\Artem_Yablokov\IdeaProjects\AWS\fakeshop\src\main\java\com\h0lmes\fakeshop\web\ShoppingCartController.java
-C:\Users\Artem_Yablokov\IdeaProjects\AWS\fakeshop\src\main\java\com\h0lmes\fakeshop\model\ShoppingCart.java
-C:\Users\Artem_Yablokov\IdeaProjects\AWS\fakeshop\src\main\java\com\h0lmes\fakeshop\model\Product.java
-C:\Users\Artem_Yablokov\IdeaProjects\AWS\fakeshop\src\main\java\com\h0lmes\fakeshop\aop\XRayInspector.java
 C:\Users\Artem_Yablokov\IdeaProjects\AWS\fakeshop\src\main\java\com\h0lmes\fakeshop\FakeshopApplication.java
 C:\Users\Artem_Yablokov\IdeaProjects\AWS\fakeshop\src\main\java\com\h0lmes\fakeshop\repository\ShoppingCartRepository.java
 C:\Users\Artem_Yablokov\IdeaProjects\AWS\fakeshop\src\main\java\com\h0lmes\fakeshop\service\SqsReceiver.java
+C:\Users\Artem_Yablokov\IdeaProjects\AWS\fakeshop\src\main\java\com\h0lmes\fakeshop\model\ShoppingCart.java
 C:\Users\Artem_Yablokov\IdeaProjects\AWS\fakeshop\src\main\java\com\h0lmes\fakeshop\service\ProductService.java
+C:\Users\Artem_Yablokov\IdeaProjects\AWS\fakeshop\src\main\java\com\h0lmes\fakeshop\model\Product.java
 C:\Users\Artem_Yablokov\IdeaProjects\AWS\fakeshop\src\main\java\com\h0lmes\fakeshop\service\ShoppingCartService.java
 C:\Users\Artem_Yablokov\IdeaProjects\AWS\fakeshop\src\main\java\com\h0lmes\fakeshop\web\ProductController.java
 C:\Users\Artem_Yablokov\IdeaProjects\AWS\fakeshop\src\main\java\com\h0lmes\fakeshop\service\SqsSender.java
