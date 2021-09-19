@@ -34,4 +34,10 @@ public class ShoppingCartController {
         return ResponseEntity.ok(shoppingCartService.test(cartName));
     }
 
+    @GetMapping("send/{cartName}")
+//    @Transactional()
+    public ResponseEntity<ShoppingCart> send(@PathVariable String cartName) {
+        return ResponseEntity.ok(shoppingCartService.send(cartName));
+    }
+
 }

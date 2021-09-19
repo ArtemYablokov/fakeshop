@@ -2,7 +2,6 @@ package com.h0lmes.fakeshop.service;
 
 import com.h0lmes.fakeshop.model.Product;
 import com.h0lmes.fakeshop.model.ShoppingCart;
-import com.h0lmes.fakeshop.repository.ProductRepository;
 import com.h0lmes.fakeshop.repository.ShoppingCartRepository;
 import org.springframework.stereotype.Service;
 
@@ -15,10 +14,12 @@ public class ShoppingCartService {
 
     private ShoppingCartRepository shoppingCartRepository;
     private ProductService productService;
+    private SqsSender sqsSender;
 
-    public ShoppingCartService(ShoppingCartRepository shoppingCartRepository, ProductService productService) {
+    public ShoppingCartService(ShoppingCartRepository shoppingCartRepository, ProductService productService, SqsSender sqsSender) {
         this.shoppingCartRepository = shoppingCartRepository;
         this.productService = productService;
+        this.sqsSender = sqsSender;
     }
 
     private int getRandomNumber() {
@@ -76,5 +77,14 @@ public class ShoppingCartService {
         shoppingCart.getProducts().add(generateProduct());
         ShoppingCart save = shoppingCartRepository.save(shoppingCart);
         return save;
+    }
+
+    public ShoppingCart send(String cartName) {
+        Optional<ShoppingCart> byName = shoppingCartRepository.findByName(cartName);
+
+        ShoppingCart shoppingCart = byName.orElseGet(() -> createShoppingCart(cartName));
+        sqsSender.send(shoppingCart);
+
+        return shoppingCart;
     }
 }
